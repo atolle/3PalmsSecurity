@@ -1,0 +1,39 @@
+﻿@model _3PalmsSecurity.ViewModels.ContactUsViewModel
+
+@*<div class="row">
+    <div class="col-md-4">*@
+<div class="container">
+    <form asp-controller="Home" asp-action="ContactUs" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            @Html.LabelFor(c => c.Name, new { @class = "col-2 col-form-label" })
+            <div class="col-10">
+                @Html.TextBoxFor(c => c.Name, new { @class = "form-control" })
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(c => c.Company, new { @class = "col-2 col-form-label" })
+            <div class="col-10">
+                @Html.TextBoxFor(c => c.Company, new { @class = "form-control" })
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(c => c.Email, new { @class = "col-2 col-form-label" })
+            <div class="col-10">
+                @Html.TextBoxFor(c => c.Email, new { @class = "form-control" })
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.LabelFor(c => c.Phone, new { @class = "col-2 col-form-label" })
+            <div class="col-10">
+                @Html.TextBoxFor(c => c.Phone, new { @class = "form-control" })
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-secondary my-2 my-sm-0 float-right">Submit</button>
+        <div style="clear:both"></div>
+    </form>
+</div>

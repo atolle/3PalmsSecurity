@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Palms Security</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-light bg-faded navbar-expand-lg fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">            
+            <img src="~/Content/Images/logo_red_blueoutline.png" width="157" height="125" class="d-inline-block align-top" alt="">            
+        </a>
+
+        <div class="collapse navbar-collapse flex-column ml-lg-0 ml-3" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto flex-row navbar-row">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-phone"></i> 1-800-123-4567</a>
+                </li>
+            </ul>
+            <br />
+            <ul class="nav navbar-nav ml-auto flex-row mb-2 navbar-row">
+                <li class="nav-item">
+                    <a class="nav-link" id="home-btn">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="what-we-do-btn">What We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="our-partners-btn">Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="who-we-serve-btn">Who We Serve</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="who-we-are-btn">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" id="contact-us-btn">
+                        Contact Us
+                    </button>
+                </li>
+            </ul>
+            @*@await Html.PartialAsync("_LoginPartial")*@
+        </div>
+    </nav>
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - 3 Palms Security</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
