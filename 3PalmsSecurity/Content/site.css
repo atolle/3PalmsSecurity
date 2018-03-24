@@ -139,7 +139,11 @@ h1 {
 }
 
 #what-we-do h2 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+#what-we-do h4 {
+    margin-bottom: 20px;
 }
 
 #what-we-do p {
@@ -190,7 +194,11 @@ h1 {
 }
 
 #our-partners h2 {
-    margin: 40px;
+    margin: 20px;
+}
+
+#our-partners h4 {
+    margin: 20px;
 }
 
 #our-partners img {
@@ -268,8 +276,12 @@ h1 {
 
 .about-img {
     margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 40px;
+    margin-right: 70px;    
+    /*margin-bottom: 40px;*/
+}
+
+#phil {
+    display: inline-block;
 }
 
 #phil p {
@@ -282,7 +294,6 @@ h1 {
 }
 
 #phil h5 {
-    padding-bottom: 20px;
     font-style: italic;
 }
 
@@ -298,7 +309,6 @@ h1 {
 
 #kevin h5 {
     margin-left: 70px;
-    padding-bottom: 20px;
     font-style: italic;
 }
 
