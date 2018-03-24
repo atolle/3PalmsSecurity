@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/3PalmsSecurity/Properties/PublishProfiles/dev.3palmssecurity.com - Web Deploy.pubxml

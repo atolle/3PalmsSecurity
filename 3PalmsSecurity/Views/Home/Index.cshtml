@@ -115,8 +115,8 @@
         </div>
         <h4 class="text-center">Connect With Us On Social Media</h4>
         <div class="social-icon-container">
-            <a href="#"><i class="fa fa-2x fa-linkedin social-icon"></i></a>
-            <a href="#"><i class="fa fa-2x fa-facebook social-icon"></i></a>
+            <a href="https://linkedin.com/company/28139371/"><i class="fa fa-2x fa-linkedin social-icon"></i></a>
+            <a href="https://facebook.com/3pivs/"><i class="fa fa-2x fa-facebook social-icon"></i></a>
             <a href="#"><i class="fa fa-2x fa-twitter social-icon"></i></a>
         </div>
     </div>
@@ -127,6 +127,9 @@
     <script>
         $(document).ready(function () {
             var navbarOffset = $("nav").height();
+
+            // Client side validation for 
+            $.validator.unobtrusive.parse($("#contact-us-form"));
 
             $("#home-btn").click(function () {
                 $('html,body').animate({
@@ -162,6 +165,61 @@
                 $('html,body').animate({
                     scrollTop: $("#contact-us").offset().top - navbarOffset
                 }, 'slow');
+            });
+
+            $(document).on("submit", function (e, data) {
+                e.preventDefault();
+
+                var form = e.target;
+                var formData = new FormData(form);
+
+                var submitButton = $(".submit-button");
+                var submitButtonHtml = submitButton.html();
+                // Show spinner on submit button and disable it
+                submitButton.html('<div class="loader"></div>');
+                submitButton.attr("disabled", true);
+
+                $.ajax({
+                    url: form.action,
+                    type: 'POST',
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false
+                })
+                .then(function (response) {                    
+                    bootbox.dialog({
+                        message: "Thank you for your interest! We have received your inquiry we will be reaching out to you soon.",
+                        buttons: {
+                            confirm: {
+                                label: 'Close',
+                                className: 'btn-outline-primary'
+                            },
+                        },
+                        callback: function () { }
+                    });
+
+                    // Remove spinner from submit button
+                    submitButton.html(submitButtonHtml);
+                    submitButton[0].classList.add("btn-outline-secondary-disabled");
+                    submitButton[0].classList.remove("btn-outline-secondary");
+                })
+                .fail(function (error) {      
+                    bootbox.dialog({
+                        message: "An error occurred while submitting the form.<br /><br />Error: " + error.statusText,
+                        buttons: {
+                            confirm: {
+                                label: 'Close',
+                                className: 'btn-outline-primary'
+                            },
+                        },
+                        callback: function () { }
+                    });
+
+                    // Remove spinner from submit button and enable so user can try to resubmit
+                    submitButton.html(submitButtonHtml);
+                    submitButton.attr("disabled", false);
+                });
             });
         });
     </script>
