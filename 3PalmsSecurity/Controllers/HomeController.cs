@@ -49,7 +49,11 @@ namespace _3PalmsSecurity.Controllers
                         mail.From = new MailAddress(mailAccount);
                         mail.To.Add(mailAccount);
                         mail.Subject = vm.Company + " - " + vm.Email;
-                        mail.Body = "<h1>Hello</h1>";
+                        mail.Body = "The following company has submitted a request for contact.<br />" +
+                            "Name: " + vm.Name + "<br />" +
+                            "Company: " + vm.Company + "<br />" +
+                            "Email: " + vm.Email + "<br />" +
+                            "Phone: " + vm.Phone + "<br />";
                         mail.IsBodyHtml = true;
 
                         using (SmtpClient smtp = new SmtpClient(smtpServer, smtpPort))
