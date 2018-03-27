@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /3PalmsSecurity/Properties/PublishProfiles/dev.3palmssecurity.com - Web Deploy.pubxml
+/AppSettings.config
+/image staging

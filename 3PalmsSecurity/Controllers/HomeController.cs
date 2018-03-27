@@ -1,11 +1,15 @@
 ﻿using _3PalmsSecurity.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Mail;
+using System.Reflection;
 using System.Web;
 using System.Web.Configuration;
+using System.Web.Http;
 using System.Web.Http.Results;
 using System.Web.Mvc;
 
@@ -32,19 +36,19 @@ namespace _3PalmsSecurity.Controllers
             return View();
         }
 
-        [HttpPost]
+        [System.Web.Mvc.HttpPost]
         public ActionResult ContactUs(ContactUsViewModel vm)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
+                if (ModelState.IsValid)
                 {
                     using (MailMessage mail = new MailMessage())
                     {
                         string mailAccount = WebConfigurationManager.AppSettings["mailAccount"];
-                        string mailPassword = WebConfigurationManager.AppSettings["mailPassword"];
-                        string smtpServer = WebConfigurationManager.AppSettings["smtpServer"];
-                        int smtpPort = Convert.ToInt32(WebConfigurationManager.AppSettings["smtpPort"]);
+                        //string mailPassword = WebConfigurationManager.AppSettings["mailPassword"];
+                        //string smtpServer = WebConfigurationManager.AppSettings["smtpServer"];
+                        //int smtpPort = Convert.ToInt32(WebConfigurationManager.AppSettings["smtpPort"]);
 
                         mail.From = new MailAddress(mailAccount);
                         mail.To.Add(mailAccount);
@@ -56,20 +60,24 @@ namespace _3PalmsSecurity.Controllers
                             "Phone: " + vm.Phone + "<br />";
                         mail.IsBodyHtml = true;
 
-                        using (SmtpClient smtp = new SmtpClient(smtpServer, smtpPort))
-                        {
-                            smtp.Credentials = new NetworkCredential(mailAccount, mailPassword);
-                            smtp.EnableSsl = true;
-                            smtp.Send(mail);
-                        }
+                        SmtpClient smtp = new SmtpClient();
+                        smtp.Send(mail);
+
+                        //using (SmtpClient smtp = new SmtpClient())
+                        //{
+                        //    smtp.Credentials = new NetworkCredential(mailAccount, mailPassword);
+                        //    smtp.EnableSsl = true;
+                        //    smtp.Send(mail);
+                        //}
                     }
                 }
-                catch (Exception ex)
-                {
-                    // Something went wrong
-                    return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, ex.InnerException.ToString());
-                }
             }
+            catch (Exception ex)
+            {
+                // Something went wrong
+                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, ex.ToString());
+            }
+
 
             return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
