@@ -3,7 +3,6 @@
 <div class="container">
     @using (Html.BeginForm("ContactUs", "Home", FormMethod.Post, new { id = "contact-us-form" }))
     {
-        @Html.ValidationSummary()
         <div class="form-group row">
             @Html.LabelFor(c => c.Name, new { @class = "col-2 col-form-label" })
             <div class="col-10">
@@ -32,7 +31,7 @@
                 @Html.ValidationMessageFor(c => c.Phone)
             </div>
         </div>
-        <button type="submit" class="btn btn-outline-secondary my-2 my-sm-0 float-right submit-button">Submit</button>
+        <button type="submit" class="btn btn-outline-secondary my-2 my-sm-0 float-right submit-button">Send</button>
         <div style="clear:both"></div>
     }
 </div>

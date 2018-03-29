@@ -242,14 +242,17 @@
     <Content Include="Content\Images\logo_green_green.png" />
     <Content Include="Content\Images\logo_hanwhatechwin_transparent_color.png" />
     <Content Include="Content\Images\logo_hanwhatechwin_transparent_white.png" />
+    <Content Include="Content\Images\logo_hanwhatechwin_transparent_yellow.png" />
     <Content Include="Content\Images\logo_red_blueoutline.png" />
     <Content Include="Content\Images\logo_red_blueoutline_transparent.png" />
     <Content Include="Content\Images\logo_red_darkblue.png" />
     <Content Include="Content\Images\logo_red_small_cropped.png" />
     <Content Include="Content\Images\logo_solink_original.png" />
     <Content Include="Content\Images\logo_solink_transparent_white.png" />
+    <Content Include="Content\Images\logo_solink_transparent_yellow.png" />
     <Content Include="Content\Images\logo_speco_transparent_color.png" />
     <Content Include="Content\Images\logo_speco_transparent_white.png" />
+    <Content Include="Content\Images\logo_speco_transparent_yellow.png" />
     <Content Include="Content\Images\palm-trees-blue.png" />
     <Content Include="Content\Images\palm-trees-brown.png" />
     <Content Include="Content\Images\palm-trees-light-blue.png" />

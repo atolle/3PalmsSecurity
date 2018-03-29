@@ -1,4 +1,10 @@
-﻿body {
+﻿h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+body {
     padding-bottom: 20px;
     padding-top: 100px;
 }
@@ -210,6 +216,10 @@ h1 {
     vertical-align: middle;
 }
 
+#our-partners img {
+    margin-bottom: 40px;
+}
+
 #contact-us {
     min-height: 400px;
     background-color: rgb(78, 84, 88);
@@ -276,12 +286,12 @@ h1 {
 
 .about-img {
     margin-left: 70px;
-    margin-right: 70px;    
+    margin-right: 70px;  
     /*margin-bottom: 40px;*/
 }
 
-#phil {
-    display: inline-block;
+#phil .about-img {
+    /*display: inline-block;*/
 }
 
 #phil p {
@@ -303,12 +313,12 @@ h1 {
 }
 
 #kevin h3 {
-    margin-left: 70px;
+    /*margin-left: 70px;*/
     padding-bottom: 0px;
 }
 
 #kevin h5 {
-    margin-left: 70px;
+    /*margin-left: 70px;*/
     font-style: italic;
 }
 
