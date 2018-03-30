@@ -195,8 +195,10 @@ h1 {
 }
 
 #our-partners p {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: auto;
+    text-align: justify;
+    width: 75%;
+
 }
 
 #our-partners h2 {
@@ -251,7 +253,7 @@ h1 {
 }
 
 .contact-us-form {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-bottom: 20px;
     margin: 0 auto;
     width: 50%;
@@ -259,9 +261,11 @@ h1 {
     border-color: rgb(237, 229, 206);
 }
 
-#contact-us p {
+#contact-us h5 {
     margin-left: 70px;
     margin-right: 70px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 #contact-us a {
@@ -290,36 +294,38 @@ h1 {
     /*margin-bottom: 40px;*/
 }
 
-#phil .about-img {
-    /*display: inline-block;*/
+#who-we-are-images .about-img {
+    border-radius: 50%;
 }
 
-#phil p {
+#who-we-are-images p {
     margin-left: 70px;
     margin-right: 70px;
 }
 
-#phil h3 {
+#who-we-are-images h3 {
     padding-bottom: 0px;
 }
 
-#phil h5 {
+#who-we-are-images h5 {
     font-style: italic;
 }
 
-#kevin p {
+#who-we-are-text p {
     margin-left: 70px;
     margin-right: 70px;
+    text-align: justify;
 }
 
-#kevin h3 {
+#who-we-are-text h3 {
     /*margin-left: 70px;*/
-    padding-bottom: 0px;
+    padding-bottom: 10px;
 }
 
-#kevin h5 {
+#who-we-are-text h5 {
     /*margin-left: 70px;*/
     font-style: italic;
+    margin-bottom: 20px;
 }
 
 /*full width container*/
