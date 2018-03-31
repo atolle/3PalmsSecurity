@@ -120,12 +120,13 @@ h1 {
     padding: 10px;
 }
 
-#who-we-serve {
-    padding: 60px;
+.section {
+    padding: 40px;
 }
 
-#who-we-serve h2 {
-    margin-bottom: 40px;
+.section-title, .section-subtitle {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #who-we-serve p {
@@ -138,18 +139,6 @@ h1 {
     display: block;
     margin: auto;
     padding: 20px;
-}
-
-#what-we-do {
-    padding: 60px;
-}
-
-#what-we-do h2 {
-    margin-bottom: 20px;
-}
-
-#what-we-do h4 {
-    margin-bottom: 20px;
 }
 
 #what-we-do p {
@@ -165,13 +154,8 @@ h1 {
 }
 
 #who-we-are {
-    padding: 60px;
     background-color: rgb(133, 26, 32);
     color: rgb(237, 229, 206);
-}
-
-#who-we-are h2 {
-    margin-bottom: 40px;
 }
 
 #who-we-are p {
@@ -184,7 +168,6 @@ h1 {
     min-height: 400px;
     background-color: rgb(63, 93, 109);
     color: rgb(237, 229, 206);
-    padding: 20px;
 }
 
 #our-partners .col {
@@ -199,14 +182,6 @@ h1 {
     text-align: justify;
     width: 75%;
 
-}
-
-#our-partners h2 {
-    margin: 20px;
-}
-
-#our-partners h4 {
-    margin: 20px;
 }
 
 #our-partners img {
@@ -227,10 +202,6 @@ h1 {
     background-color: rgb(78, 84, 88);
     color: rgb(237, 229, 206);
     padding: 20px;
-}
-
-#contact-us h2 {
-    margin: 40px;
 }
 
 #contact-us .col {
@@ -255,25 +226,14 @@ h1 {
 .contact-us-form {
     padding-top: 60px;
     padding-bottom: 20px;
-    margin: 0 auto;
+    margin: 40px auto;
     width: 50%;
     border-style: solid;
     border-color: rgb(237, 229, 206);
 }
 
-#contact-us h5 {
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
 #contact-us a {
     display: inline-block;
-}
-
-#contact-us h4 {
-    padding-top: 20px;
 }
 
 .social-icon-container {
@@ -289,12 +249,6 @@ h1 {
 }
 
 .about-img {
-    margin-left: 70px;
-    margin-right: 70px;  
-    /*margin-bottom: 40px;*/
-}
-
-#who-we-are-images .about-img {
     border-radius: 50%;
 }
 

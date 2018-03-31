@@ -236,6 +236,7 @@
     <Content Include="Content\Images\hanwhatechwin-logo-yellow-transparent.png" />
     <Content Include="Content\Images\Integrity.png" />
     <Content Include="Content\Images\Kevin.png" />
+    <Content Include="Content\Images\Kevin_square.png" />
     <Content Include="Content\Images\keys-resized.jpeg" />
     <Content Include="Content\Images\logo_blue_blue.png" />
     <Content Include="Content\Images\logo_darkred_red.png" />
@@ -259,6 +260,7 @@
     <Content Include="Content\Images\palm-trees-primary-blue.png" />
     <Content Include="Content\Images\Phil.png" />
     <Content Include="Content\Images\Phil_resized.png" />
+    <Content Include="Content\Images\Phil_square.png" />
     <Content Include="Content\Images\Security.png" />
     <Content Include="Content\Images\servers.jpeg" />
     <Content Include="Content\Images\Service.png" />
