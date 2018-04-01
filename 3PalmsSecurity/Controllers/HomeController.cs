@@ -1,4 +1,5 @@
 ﻿using _3PalmsSecurity.ViewModels;
+using reCAPTCHA.MVC;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +17,7 @@ using System.Web.Mvc;
 namespace _3PalmsSecurity.Controllers
 {
     public class HomeController : Controller
-    {
+    {  
         public ActionResult Index()
         {
             return View();
@@ -37,6 +38,9 @@ namespace _3PalmsSecurity.Controllers
         }
 
         [System.Web.Mvc.HttpPost]
+        [CaptchaValidator(
+            ErrorMessage = "Invalid input captcha.",
+            RequiredMessage = "The captcha field is required.")]
         public ActionResult ContactUs(ContactUsViewModel vm)
         {
             try
@@ -70,6 +74,12 @@ namespace _3PalmsSecurity.Controllers
                         //    smtp.Send(mail);
                         //}
                     }
+
+                    return new HttpStatusCodeResult(HttpStatusCode.OK);
+                }
+                else
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.InternalServerError);
                 }
             }
             catch (Exception ex)
@@ -77,9 +87,6 @@ namespace _3PalmsSecurity.Controllers
                 // Something went wrong
                 return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, ex.ToString());
             }
-
-
-            return new HttpStatusCodeResult(HttpStatusCode.OK);
         }
     }
 }

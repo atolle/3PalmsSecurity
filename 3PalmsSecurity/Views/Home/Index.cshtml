@@ -52,19 +52,19 @@
         <h5 class="section-subtitle">Video Technology Partners</h5>
         <div class="row">
             <div class="col">
-                <a href="http://solinkcorp.com" target="_blank"><img src="~/Content/Images/logo_solink_transparent_yellow.png" width="200" height="33" class="d-inline-block align-top" alt=""></a>
+                <a href="http://solinkcorp.com" target="_blank"><img src="~/Content/Images/logo_solink_transparent_yellow.png" width="250" height="41" class="d-inline-block align-top" alt=""></a>
                 <p>Solink is a data-driven security platform that provides network solutions for the identification and reporting of fraudulent activities for the retail and financial markets. A subscription base solution, the software automatically matches in-store transactions to video and analyzes the data to identify suspicious events. Using the web or mobile app, you can access all locations remotely, search for incidents, and quickly share evidence. In addition, the solution provides management with the tools to identify additional Training opportunities. With Solink, you can dramatically reduce investigation times and know that you're keeping a close eye on your operations.</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="https://hanwhasecurity.com" target="_blank"><img src="~/Content/Images/logo_hanwhatechwin_transparent_yellow.png" width="200" height="57" class="d-inline-block align-top" alt=""></a>
+                <a href="https://hanwhasecurity.com" target="_blank"><img src="~/Content/Images/logo_hanwhatechwin_transparent_yellow.png" width="250" height="71" class="d-inline-block align-top" alt=""></a>
                 <p>Hanwha Techwin America (formerly Samsung Techwin) is a precision technology company that has accumulated manufacturing expertise over 60 years of operation. Hanwha recently introduced the Wisenet line of innovative security products that include the 360° Fisheye and Multi Directional 180° cameras. Hanwha Techwin America provides products and technologies with the highest levels of performance, reliability and cost-efficiency for professional security applications.</p>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <a href="http://specotech.com" target="_blank"><img src="~/Content/Images/logo_speco_transparent_yellow.png" width="200" height="33" class="d-inline-block align-top" alt=""></a>
+                <a href="http://specotech.com" target="_blank"><img src="~/Content/Images/logo_speco_transparent_yellow.png" width="250" height="64" class="d-inline-block align-top" alt=""></a>
                 <p>For over fifty years, Speco Technologies has provided the latest innovations in high definition video surveillance and accessories. Speco continues to support the industry with affordable, dependable product, while delivering exceptional customer service through extensive product training and technical support.</p>
             </div>
         </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
     <div id="who-we-are" class="section">
-        <h2 class="section-title">Who We Are</h2>    
+        <h2 class="section-title">Who We Are</h2>
         <h5 class="section-subtitle">The Executive Team</h5>
         <div id="who-we-are-images" class="row">
             <div class="col">
@@ -139,11 +139,12 @@
 
 @section scripts
 {
+    <script type="text/javascript" src="//www.google.com/recaptcha/api.js" async></script>
     <script>
         $(document).ready(function () {
             var navbarOffset = $("nav").height();
 
-            // Client side validation for 
+            // Client side validation for
             $.validator.unobtrusive.parse($("#contact-us-form"));
 
             $("#home-btn").click(function () {
@@ -185,6 +186,23 @@
             $(document).on("submit", function (e, data) {
                 e.preventDefault();
 
+                var recaptcha = $("#g-recaptcha-response").val();
+                if (recaptcha === "") {
+                    event.preventDefault();
+                    bootbox.dialog({
+                        message: "Please check the captcha before submitting the form.",
+                        buttons: {
+                            confirm: {
+                                label: 'Close',
+                                className: 'btn-outline-primary'
+                            },
+                        },
+                        callback: function () { }
+                    });
+
+                    return;
+                }
+
                 var form = e.target;
                 var formData = new FormData(form);
 
@@ -202,39 +220,41 @@
                     contentType: false,
                     processData: false
                 })
-                .then(function (response) {                    
-                    bootbox.dialog({
-                        message: "Thank you for your interest! We have received your inquiry we will be reaching out to you soon.",
-                        buttons: {
-                            confirm: {
-                                label: 'Close',
-                                className: 'btn-outline-primary'
+                    .then(function (response) {
+                        bootbox.dialog({
+                            message: "Thank you for your interest! We have received your inquiry we will be reaching out to you soon.",
+                            buttons: {
+                                confirm: {
+                                    label: 'Close',
+                                    className: 'btn-outline-primary'
+                                },
                             },
-                        },
-                        callback: function () { }
-                    });
+                            callback: function () { }
+                        });
 
-                    // Remove spinner from submit button
-                    submitButton.html(submitButtonHtml);
-                    submitButton[0].classList.add("btn-outline-secondary-disabled");
-                    submitButton[0].classList.remove("btn-outline-secondary");
-                })
-                .fail(function (error) {      
-                    bootbox.dialog({
-                        message: "An error occurred while submitting the form.<br /><br />Error: " + error.statusText,
-                        buttons: {
-                            confirm: {
-                                label: 'Close',
-                                className: 'btn-outline-primary'
+                        // Remove spinner from submit button
+                        submitButton.html(submitButtonHtml);
+                        submitButton[0].classList.add("btn-outline-secondary-disabled");
+                        submitButton[0].classList.remove("btn-outline-secondary");
+                    })
+                    .fail(function (error) {
+                        bootbox.dialog({
+                            message: "An error occurred while submitting the form.<br /><br />Error: " + error.statusText,
+                            buttons: {
+                                confirm: {
+                                    label: 'Close',
+                                    className: 'btn-outline-primary'
+                                },
                             },
-                        },
-                        callback: function () { }
-                    });
+                            callback: function () { }
+                        });
 
-                    // Remove spinner from submit button and enable so user can try to resubmit
-                    submitButton.html(submitButtonHtml);
-                    submitButton.attr("disabled", false);
-                });
+                        // Remove spinner from submit button and enable so user can try to resubmit
+                        submitButton.html(submitButtonHtml);
+                        submitButton.attr("disabled", false);
+
+                        grecaptcha.reset();
+                    });
             });
         });
     </script>
