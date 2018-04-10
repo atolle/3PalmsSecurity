@@ -7,50 +7,29 @@
 body {
     padding-bottom: 20px;
     padding-top: 150px;
+    overflow-x: hidden;
 }
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
-/*.header {
-    position: relative;
-    width: 100%;
-    /*top: 0;
-    left: 0;*//*
-    height: 450px;
-    background-attachment: fixed;
-    background-image: url("../Content/Images/test_image3.png");
-    background-position: top 10vmax center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}*/
-
-/*.header .banner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    box-sizing: border-box;
-    background: rgba(78, 84, 88, 0.8);
-    color: #fff;
-    text-align: right;
-}*/
+/*margin-top is -20 to hide fixed image in .header*/ 
+.footer {
+    margin-top: -20px;
+    background-color: white;
+}
 
 .header {
-    /*background-size: cover;*/
     position: relative;
-    width: 100%;
-    /*top: 0;
-    left: 0;*/
-    min-height: 430px;
-    /*height: 450px;*/
-    background-attachment: fixed;
-    background-image: url("../Content/Images/test-header-image-1350x450.png");
-    background-position: top 10vmax center;
-    background-repeat: no-repeat;
-    /*background-size: 100% auto;*/
+}
+
+/*resolves resize issue with .header image at width 767 px or fewer*/ 
+@media (max-width: 767px) {
+    .header img {
+        margin-left: 20px;
+        margin-bottom: -15px;
+    }
 }
 
 .banner {
@@ -70,10 +49,6 @@ h1 {
     display: table-cell;
     vertical-align: middle;
 }
-
-/*.header-image img {
-    width: 100%;
-}*/
 
 /* QR code generator */
 #qrCode {
@@ -116,7 +91,7 @@ h1 {
 
 .btn-outline-secondary {
     color: black !important;
-    background-color: rgb(237, 229, 206) !important;
+    background-color: white !important;
     border-color: rgb(63, 93, 109) !important;
 }
 
@@ -146,6 +121,10 @@ h1 {
 /*
 *   WHO WE SERVE
 */
+
+#who-we-serve {
+    background-color: white;
+}
 
 #who-we-serve .col {
     text-align: center;
@@ -188,6 +167,10 @@ h1 {
 /*
 *   WHAT WE DO
 */
+
+#what-we-do {
+    background-color: white;
+}
 
 #what-we-do .col {
     text-align: center;
@@ -322,9 +305,7 @@ h1 {
     padding-bottom: 20px;
     margin: auto;
     margin-bottom: 20px;
-    width: 50%;
-    /*border-style: solid;
-    border-color: rgb(237, 229, 206);*/
+    max-width: 800px;
 }
 
 #contact-us a {
@@ -380,7 +361,15 @@ h1 {
     }
 }
 
-.g-recaptcha {
+/*.g-recaptcha {
     transform-origin: left top;
     -webkit-transform-origin: left top;
-}
+}*/
+
+/*.g-recaptcha iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
