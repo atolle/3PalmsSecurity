@@ -274,6 +274,7 @@
     <Content Include="Content\Images\speco-logo-yellow-transparent.png" />
     <Content Include="Content\Images\test-header-image-1350x450.png" />
     <Content Include="Content\Images\test-header-image-1960x653.png" />
+    <Content Include="Content\Images\test-header-image-phone.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />

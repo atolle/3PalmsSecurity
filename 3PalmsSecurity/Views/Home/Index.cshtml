@@ -4,9 +4,9 @@
 
 
 <section class="block">
-    <div id="headerimage" class="header">
-        <img src="~/Content/Images/test-header-image-1960x653.png" style="width: 100%; position: fixed; z-index: -50;" class="img-fluid" />
-        <img src="~/Content/Images/test-header-image-1960x653.png" style="height: 100%; width: 100%; visibility: hidden;" class="img-fluid" />
+    <div class="header">
+        <img id="header-image" src="~/Content/Images/test-header-image-1960x653.png" style="width: 100%; position: fixed; z-index: -50;" class="img-fluid" />
+        <img id="header-image-transparent" src="~/Content/Images/test-header-image-1960x653.png" style="height: 100%; width: 100%; visibility: hidden;" class="img-fluid" />
         <div class="banner">
             <div class="banner-text">
                 <h2>Leading a new approach to cloud-based exception reporting.</h2>
@@ -234,6 +234,23 @@
                         grecaptcha.reset();
                     });
             });
+
+            // We are dynamically changing the header image to a cropped version for small devices
+            var onResize = function (e) {
+                
+                width = e.target.outerWidth;
+                height = e.target.outerHeight;
+
+                if (width <= 480) {
+                    document.getElementById("header-image").src = "/Content/Images/test-header-image-phone.png";
+                    document.getElementById("header-image-transparent").src = "/Content/Images/test-header-image-phone.png";
+                }
+                else {
+                    document.getElementById("header-image").src = "/Content/Images/test-header-image-1960x653.png";
+                    document.getElementById("header-image-transparent").src = "/Content/Images/test-header-image-1960x653.png";
+                }
+            }
+            window.addEventListener("resize", onResize);
         });
     </script>
 }
