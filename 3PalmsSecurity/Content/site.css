@@ -31,6 +31,14 @@ h1 {
         margin-bottom: -15px;
     }
 }
+ /* small devices */
+@media screen and (max-width: 479px) {
+    .section-title, .section-subtitle, .section-text {
+        margin-left: auto !important;
+        margin-right: auto!important;  
+        min-width: 200px;
+    }
+}
 
 .banner {
     position: absolute;
@@ -62,7 +70,7 @@ h1 {
 }
 
 .navbar-brand {
-    margin-left: 50px;
+    margin-left: 2%;
 }
 
 .navbar {
@@ -133,11 +141,6 @@ h1 {
     padding: 20px;
 }
 
-#who-we-serve p {
-    margin-left: 70px;
-    margin-right: 70px;
-}
-
 #who-we-serve h5 {
     text-align: center;
 }
@@ -156,12 +159,19 @@ h1 {
 
 .section-subtitle {
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 .section-title, .section-subtitle {
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
+}
+
+.section-text {
+    margin-right: 70px;
+    margin-left: 70px;
+    text-align: justify;
 }
 
 /*
@@ -177,12 +187,6 @@ h1 {
     display: block;
     margin: auto;
     padding: 20px;
-}
-
-#what-we-do p {
-    margin-left: 70px;
-    margin-right: 70px;
-    text-align: justify;
 }
 
 /*
@@ -203,42 +207,19 @@ h1 {
 
 #who-we-are p {
     margin-bottom: 40px;
-    margin-left: 70px;
-    margin-right: 70px;
 }
 
 .about-img {
     border-radius: 50%;
-}
-
-#who-we-are-images p {
-    margin-left: 70px;
-    margin-right: 70px;
-}
-
-#who-we-are-images h3 {
-    padding-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 #who-we-are-images h5 {
     font-style: italic;
 }
 
-#who-we-are-text p {
-    margin-left: 70px;
-    margin-right: 70px;
-    text-align: justify;
-}
-
-#who-we-are-text h3 {
-    /*margin-left: 70px;*/
-    padding-bottom: 10px;
-}
-
-#who-we-are-text h5 {
-    /*margin-left: 70px;*/
-    font-style: italic;
-    margin-bottom: 20px;
+#who-we-are p {
+    margin-top: 20px;
 }
 
 /*
@@ -258,16 +239,13 @@ h1 {
     padding: 20px;
 }
 
-#solutions p {
-    margin: auto;
-    text-align: justify;
-    width: 75%;
-
-}
-
 #solutions img {
     /*margin: 50px;*/
     max-height: 100%;
+}
+
+#solutions img:hover {
+    opacity: 0.6;
 }
 
 #solutions > col {
@@ -323,7 +301,7 @@ h1 {
 }
 
 .social-icon:hover {
-    color: rgb(158, 158, 158);
+    opacity: 0.7;
 }
 
 /*full width container*/
