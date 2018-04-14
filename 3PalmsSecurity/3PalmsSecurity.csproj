@@ -237,6 +237,9 @@
     <Content Include="Content\Images\hanwha-techwin-logo-monocolor-cropped-transparent.png" />
     <Content Include="Content\Images\hanwha-techwin-logo.png" />
     <Content Include="Content\Images\hanwhatechwin-logo-yellow-transparent.png" />
+    <Content Include="Content\Images\header-image-2000x705.png" />
+    <Content Include="Content\Images\header-image-full.png" />
+    <Content Include="Content\Images\header-image-phone.PNG" />
     <Content Include="Content\Images\Integrity.png" />
     <Content Include="Content\Images\Kevin.png" />
     <Content Include="Content\Images\Kevin_square.png" />

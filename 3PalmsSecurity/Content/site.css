@@ -58,6 +58,10 @@ h1 {
     vertical-align: middle;
 }
 
+.banner-text h2 {
+    margin: 10px;
+}
+
 /* QR code generator */
 #qrCode {
     margin: 15px;
