@@ -22,6 +22,11 @@ h1 {
 
 .header {
     position: relative;
+    background-color: transparent !important;
+    background-image: url(/Content/Images/header-image-2000x705.png);
+    background-size: contain;
+    background-attachment: fixed;
+    background-position-y: 150px;
 }
 
 /*resolves resize issue with .header image at width 767 px or fewer*/ 
@@ -32,11 +37,19 @@ h1 {
     }
 }
  /* small devices */
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
     .section-title, .section-subtitle, .section-text {
         margin-left: auto !important;
         margin-right: auto!important;  
         min-width: 200px;
+    }
+
+    .header {
+        background-image: url(/Content/Images/header-image-phone.png);
+    }
+
+    .navbar-brand {
+        margin: auto !important;
     }
 }
 
