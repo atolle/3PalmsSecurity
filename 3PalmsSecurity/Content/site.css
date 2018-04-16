@@ -23,7 +23,7 @@ h1 {
 .header {
     position: relative;
     background-color: transparent !important;
-    background-image: url(/Content/Images/header-image-2000x705.png);
+    background-image: url(/Content/Images/header-image-2000x705-compressed.png);
     background-size: contain;
     background-attachment: fixed;
     background-position-y: 150px;
@@ -45,7 +45,7 @@ h1 {
     }
 
     .header {
-        background-image: url(/Content/Images/header-image-phone.png);
+        background-image: url(/Content/Images/header-image-phone-compressed.png);
     }
 
     .navbar-brand {
@@ -356,15 +356,21 @@ h1 {
     }
 }
 
-/*.g-recaptcha {
-    transform-origin: left top;
-    -webkit-transform-origin: left top;
-}*/
+#error-img {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
 
-/*.g-recaptcha iframe {
+#error-img img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-}*/
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
