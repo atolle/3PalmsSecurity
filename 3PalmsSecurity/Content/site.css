@@ -24,9 +24,10 @@ h1 {
     position: relative;
     background-color: transparent !important;
     background-image: url(/Content/Images/header-image-2000x705-compressed.png);
-    background-size: contain;
+    background-size: 100% auto;
     background-attachment: fixed;
     background-position-y: 150px;
+    background-repeat: no-repeat;
 }
 
 /*resolves resize issue with .header image at width 767 px or fewer*/ 
@@ -36,12 +37,19 @@ h1 {
         margin-bottom: -15px;
     }
 }
+
+@media screen and (max-device-width: 1024px) {
+    .header {
+        background-attachment: scroll;
+        background-position-y: 0px;
+    }
+}
+
  /* small devices */
 @media screen and (max-width: 480px) {
     .section-title, .section-subtitle, .section-text {
         margin-left: auto !important;
         margin-right: auto!important;  
-        min-width: 200px;
     }
 
     .header {
@@ -72,7 +80,7 @@ h1 {
 }
 
 .banner-text h2 {
-    margin: 10px;
+    margin: 10px 30px 10px 30px;
 }
 
 /* QR code generator */
@@ -151,7 +159,7 @@ h1 {
     background-color: white;
 }
 
-#who-we-serve .col {
+#who-we-serve .col-md {
     text-align: center;
     display: block;
     margin: auto;
@@ -162,7 +170,9 @@ h1 {
     text-align: center;
 }
 
-.serve-header {
+.serve-header .section-subtitle{
+    margin-right: auto !important;
+    margin-left: auto !important;
     padding: 10px;
 }
 
@@ -188,6 +198,7 @@ h1 {
 .section-text {
     margin-right: 70px;
     margin-left: 70px;
+    min-width: 300px;
     text-align: justify;
 }
 
@@ -210,10 +221,9 @@ h1 {
 *   WHO WE ARE
 */
 
-#who-we-are .col {
+#who-we-are .col-lg {
     text-align: center;
     display: block;
-    margin: auto;
     padding: 20px;
 }
 

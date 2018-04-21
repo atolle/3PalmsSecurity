@@ -9,13 +9,10 @@
     <link href="/Content/bootstrap.css" rel="stylesheet">
     <link href="/Content/site.css" rel="stylesheet">
     <link href="/Content/font-awesome.min.css" rel="stylesheet">
-
     <script src="/Scripts/modernizr-2.6.2.js"></script>
-
 </head>
 <body>
-
-    <div id="error-img"><img src="Content/Images/404_background.jpg"></div>
+    <div id="error-img"><img src="http://3palmssecurity.com/images/404_background.jpg"></div>
     <div class="container text-center" id="error">
         <div class="row">
             <div class="col-md-12">
