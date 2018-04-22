@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="http://3palmssecurity.com/images/logo_red_blueoutline_transparent.png">
+    <link rel="icon" href="https://3palmssecurity.com/Content/Images/logo_red_blueoutline_transparent.png">
     <title>3 Palms Security</title>
     <link href="/Content/bootstrap.css" rel="stylesheet">
     <link href="/Content/site.css" rel="stylesheet">

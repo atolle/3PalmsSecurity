@@ -317,6 +317,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Error.aspx" />
+    <None Include="Properties\PublishProfiles\3palmssecurity.com - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\dev.3palmssecurity.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />

@@ -8,7 +8,8 @@
         <img id="header-image-transparent" src="" style="height: 100%; width: 100%; visibility: hidden;" class="img-fluid" />
         <div class="banner">
             <div class="banner-text">
-                <h2>Leading a new approach to cloud-based exception reporting.</h2>
+                <h2 id="banner-text-large">Leading a new approach to cloud-based exception reporting.</h2>
+                <h3 id="banner-text-small">Leading a new approach to cloud-based exception reporting.</h3>
             </div>
         </div>
     </div>
@@ -242,9 +243,13 @@
 
                 if (width <= 480) {
                     document.getElementById("header-image-transparent").src = "/Content/Images/header-image-phone-compressed.png";
+                    document.getElementById("banner-text-large").hidden = true;
+                    document.getElementById("banner-text-small").hidden = false;
                 }
                 else {
                     document.getElementById("header-image-transparent").src = "/Content/Images/header-image-2000x705-compressed.png";
+                    document.getElementById("banner-text-large").hidden = false;
+                    document.getElementById("banner-text-small").hidden = true;
                 }
             }
             window.addEventListener("resize", onResize);
