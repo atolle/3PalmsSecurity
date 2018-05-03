@@ -12,11 +12,11 @@
     <script src="/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <div id="error-img"><img src="http://3palmssecurity.com/images/404_background.jpg"></div>
+    <div id="error-img"><img src="https://3palmssecurity.com/Content/Images/404_background.jpg"></div>
     <div class="container text-center" id="error">
         <div class="row">
             <div class="col-md-12">
-                <div class="main-icon text-success"><img src="http://3palmssecurity.com/images/logo_red_blueoutline_transparent.png" width="250" height="199"></div>
+                <div class="main-icon text-success"><img src="https://3palmssecurity.com/Content/Images/logo_red_blueoutline_transparent.png" width="250" height="199"></div>
                 <h2 class="section-title" style="margin-top: 20px;">Page Not Found</h2>
             </div>
         </div>
