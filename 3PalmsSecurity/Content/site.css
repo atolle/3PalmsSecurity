@@ -194,6 +194,10 @@ h1 {
     font-weight: 400;
 }
 
+.section-subtitle > li {
+    margin-top: 10px;
+}
+
 .section-title, .section-subtitle {
     margin-left: 70px;
     margin-right: 70px;
@@ -388,4 +392,12 @@ h1 {
     margin: auto;
     min-width: 50%;
     min-height: 50%;
+}
+
+.top-row {
+    margin-top: 50px;
+}
+
+.bottom-row {
+    margin-bottom: 50px;
 }
