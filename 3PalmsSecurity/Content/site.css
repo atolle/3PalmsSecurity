@@ -70,6 +70,12 @@ h1 {
     }
 }
 
+@media screen and (max-width: 770px) {
+    .solutions-img {
+        max-width: 70% !important;
+    }
+}
+
 .banner {
     position: absolute;
     bottom: 0;
