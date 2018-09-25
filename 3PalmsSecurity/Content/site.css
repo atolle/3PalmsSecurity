@@ -64,6 +64,10 @@ h1 {
     .navbar-brand {
         margin: auto !important;
     }
+
+    .solutions-img {
+        max-width: 90% !important;
+    }
 }
 
 .banner {
@@ -181,12 +185,17 @@ h1 {
     padding: 10px;
 }
 
+/*
+*   SECTIONS
+*/
+
 .section {
     padding: 40px;
 }
 
 .section-title {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .section-subtitle {
@@ -198,9 +207,9 @@ h1 {
     margin-top: 10px;
 }
 
-.section-title, .section-subtitle {
-    margin-left: 70px;
-    margin-right: 70px;
+.section-subtitle {
+    /*margin-left: 70px;
+    margin-right: 70px;*/
     text-align: center;
 }
 
@@ -275,8 +284,13 @@ h1 {
     padding: 20px;
 }
 
+#solutions .col-md-6 {
+    text-align: center;
+    display: block;
+    padding: 20px;
+}
+
 #solutions img {
-    /*margin: 50px;*/
     max-height: 100%;
 }
 
@@ -288,8 +302,20 @@ h1 {
     vertical-align: middle;
 }
 
-#solutions img {
+.solutions-img-container {
+    height: 80px;
     margin-bottom: 40px;
+    position: relative;
+}
+
+.solutions-img {
+    max-width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /*
