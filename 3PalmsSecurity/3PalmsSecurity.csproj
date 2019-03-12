@@ -235,6 +235,9 @@
     <Content Include="Content\Images\camcloud_banner_phone.PNG" />
     <Content Include="Content\Images\camcloud_transparent_mono.png" />
     <Content Include="Content\Images\cameras-resized.jpeg" />
+    <Content Include="Content\Images\carbon_banner.png" />
+    <Content Include="Content\Images\carbon_banner_phone.png" />
+    <Content Include="Content\Images\carbon_vert_logo.png" />
     <Content Include="Content\Images\door-green-closed-lock-resized.jpg" />
     <Content Include="Content\Images\eagle_eye_banner.png" />
     <Content Include="Content\Images\eagle_eye_banner_phone.png" />
@@ -357,7 +360,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
