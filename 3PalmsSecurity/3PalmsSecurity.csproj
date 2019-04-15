@@ -298,6 +298,7 @@
     <Content Include="Content\Images\Verkada_banner.PNG" />
     <Content Include="Content\Images\verkada_transparent.png" />
     <Content Include="Content\Images\verkada_transparent_mono.png" />
+    <Content Include="Content\Images\vivotek_logo_white_tranparent.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
