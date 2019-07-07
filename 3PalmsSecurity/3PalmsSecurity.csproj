@@ -238,6 +238,9 @@
     <Content Include="Content\Images\carbon_banner.png" />
     <Content Include="Content\Images\carbon_banner_phone.png" />
     <Content Include="Content\Images\carbon_vert_logo.png" />
+    <Content Include="Content\Images\controlbynet_banner.png" />
+    <Content Include="Content\Images\controlbynet_banner_phone.png" />
+    <Content Include="Content\Images\controlbynet_logo_mono_transparent.png" />
     <Content Include="Content\Images\door-green-closed-lock-resized.jpg" />
     <Content Include="Content\Images\eagle_eye_banner.png" />
     <Content Include="Content\Images\eagle_eye_banner_phone.png" />

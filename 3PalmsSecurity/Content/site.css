@@ -301,6 +301,10 @@ h1 {
     padding: 20px;
 }
 
+#solutions .col-md-12 {
+    padding: 20px;
+}
+
 #solutions img {
     max-height: 100%;
 }
@@ -315,7 +319,7 @@ h1 {
 
 .solutions-img-container {
     height: 120px;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
     position: relative;
 }
 
@@ -438,3 +442,15 @@ h1 {
 .bottom-row {
     margin-bottom: 50px;
 }
+
+.solutions-text {
+    display: none;
+}
+
+.show-buttons-icon:hover {
+    cursor: pointer;
+}
+
+.solutions-text:hover {
+    cursor: pointer;
+} 
