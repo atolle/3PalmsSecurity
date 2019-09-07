@@ -318,9 +318,10 @@ h1 {
 }
 
 .solutions-img-container {
-    height: 120px;
+    /*height: 120px;*/
     /*margin-bottom: 40px;*/
     position: relative;
+    margin-bottom: 20px;
 }
 
 .solutions-img {
