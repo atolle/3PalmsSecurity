@@ -390,6 +390,16 @@ h1 {
     }
 }
 
+.nav-phone {
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    .nav-phone {
+        display: none;
+    }
+}
+
 .nav-link:hover {
     cursor: pointer;
 }
