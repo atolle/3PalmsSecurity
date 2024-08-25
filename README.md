@@ -1,3 +1,3 @@
-# 3PalmsSecurity
+# 3 Palms Security
 
-Hosted at https://3palmssecurity.com
+Hosted at https://3palmssecuritydev.azurewebsites.net
